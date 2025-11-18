@@ -5,6 +5,7 @@ import { CarCard } from "@/components/car-card";
 import { featuredCars, carMakes, bodyTypes, faqItems} from "@/lib/data";
 import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+/* import HomeSearch from "@/components/home-search"; */
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
           </div>
 
           {/*Search */}
+      
 
 
         </div>
@@ -142,7 +144,7 @@ export default function Home() {
                 <div className="overflow-hidden rounded-lg flex justify-end h-28 mb-4 relative">
                   <Image
                     src={
-                      type.imageUrl || `/body/${type.name.toLowerCase()}.webp`
+                      type.image || `/body/${type.name.toLowerCase()}.webp`
                     }
                     alt={type.name}
                     fill
